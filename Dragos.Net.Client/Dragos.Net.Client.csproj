@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9179FD88-72D3-4DC9-A4F6-E63C14093AED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dragos.Net.Client</RootNamespace>
+    <AssemblyName>Dragos.Net.Client</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authenticators\Basic.cs" />
+    <Compile Include="Authenticators\Digest.cs" />
+    <Compile Include="Cookie.cs" />
+    <Compile Include="DataProviders\Attributes\ArrayItemNameAttribute.cs" />
+    <Compile Include="DataProviders\HtmlObjectProvider.cs" />
+    <Compile Include="DataProviders\WebFormDataProvider.cs" />
+    <Compile Include="DataProviders\XmlRpc\XmlRpcObject.cs" />
+    <Compile Include="Extentions.cs" />
+    <Compile Include="Html\Attribute.cs" />
+    <Compile Include="Html\DocumentInformation.cs" />
+    <Compile Include="Html\Exception\HtmlParseException.cs" />
+    <Compile Include="Html\HtmlDocument.cs" />
+    <Compile Include="Html\HtmlExtention.cs" />
+    <Compile Include="Html\HtmlObjectDynamic.cs" />
+    <Compile Include="Html\HtmlParser.cs" />
+    <Compile Include="Html\HtmlPortion.cs" />
+    <Compile Include="Html\IHtmlParser.cs" />
+    <Compile Include="Html\IParentTag.cs" />
+    <Compile Include="Html\ITag.cs" />
+    <Compile Include="Html\Parsers\AttributesParser.cs" />
+    <Compile Include="Html\Parsers\CommentParser.cs" />
+    <Compile Include="Html\Parsers\DocumentTypeParser.cs" />
+    <Compile Include="Html\Parsers\IgnoreTagParser.cs" />
+    <Compile Include="Html\Parsers\ScriptParser.cs" />
+    <Compile Include="Html\Parsers\StyleParser.cs" />
+    <Compile Include="Html\Parsers\TagParser.cs" />
+    <Compile Include="Html\Parsers\TextParser.cs" />
+    <Compile Include="Html\Selector\NodeEachVisitor.cs" />
+    <Compile Include="Html\Tags\A.cs" />
+    <Compile Include="Html\Tags\Body.cs" />
+    <Compile Include="Html\Tags\Comment.cs" />
+    <Compile Include="Html\Tags\Div.cs" />
+    <Compile Include="Html\Tags\DocumentTypeTag.cs" />
+    <Compile Include="Html\Tags\Form.cs" />
+    <Compile Include="Html\Tags\Head.cs" />
+    <Compile Include="Html\Tags\Html.cs" />
+    <Compile Include="Html\Tags\IEntry.cs" />
+    <Compile Include="Html\Tags\IHead.cs" />
+    <Compile Include="Html\Tags\Img.cs" />
+    <Compile Include="Html\Tags\Input.cs" />
+    <Compile Include="Html\Tags\Link.cs" />
+    <Compile Include="Html\Tags\Meta.cs" />
+    <Compile Include="Html\Tags\Title.cs" />
+    <Compile Include="Html\Tags\Ul.cs" />
+    <Compile Include="Html\Tags\Option.cs" />
+    <Compile Include="Html\Tags\Select.cs" />
+    <Compile Include="Html\Tags\SingleTag.cs" />
+    <Compile Include="Html\Tags\IgnoreElement.cs" />
+    <Compile Include="Html\Tags\ScriptTag.cs" />
+    <Compile Include="Html\Tags\Span.cs" />
+    <Compile Include="Html\Tags\StyleTag.cs" />
+    <Compile Include="Html\Tags\PairTag.cs" />
+    <Compile Include="Html\Tags\Table.cs" />
+    <Compile Include="Html\Tags\Text.cs" />
+    <Compile Include="Html\Tags\TextArea.cs" />
+    <Compile Include="IRequestObserver.cs" />
+    <Compile Include="ContentProviderCollection.cs" />
+    <Compile Include="DataProvider.cs" />
+    <Compile Include="DataProviders\TextDataProvider.cs" />
+    <Compile Include="DataProviders\XmlDataProvider.cs" />
+    <Compile Include="Header.cs" />
+    <Compile Include="IAuthenticator.cs" />
+    <Compile Include="IRequestProvider.cs" />
+    <Compile Include="IRequestSession.cs" />
+    <Compile Include="IResponseContent.cs" />
+    <Compile Include="DataProviders\XmlRpc\IParamValue.cs" />
+    <Compile Include="DataProviders\XmlRpc\MethodCall.cs" />
+    <Compile Include="DataProviders\XmlRpc\Param.cs" />
+    <Compile Include="DataProviders\XmlRpc\RpcArrayXmlDataConverter.cs" />
+    <Compile Include="DataProviders\XmlRpc\RpcMethodCallXmlDataConverter.cs" />
+    <Compile Include="DataProviders\XmlRpc\RpcObjectXmlDataConverter.cs" />
+    <Compile Include="DataProviders\XmlRpc\RpcStrucXmlDataConverter.cs" />
+    <Compile Include="DataProviders\XmlRpc\ValueParamFactory.cs" />
+    <Compile Include="DataProviders\XmlRpc\XmlRpc.cs" />
+    <Compile Include="DataProviders\XmlRpc\XmlRpcDataProvider.cs" />
+    <Compile Include="Parameter.cs" />
+    <Compile Include="RequestType.cs" />
+    <Compile Include="Response.cs" />
+    <Compile Include="TypeBuilder.cs" />
+    <Compile Include="Url.cs" />
+    <Compile Include="Request.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UrlRequest.cs" />
+    <Compile Include="UserAgent.cs" />
+    <Compile Include="WebClient.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dragos.Data\Dragos.Data.csproj">
+      <Project>{5ded5333-f12b-4e5d-b181-bac248d64300}</Project>
+      <Name>Dragos.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
